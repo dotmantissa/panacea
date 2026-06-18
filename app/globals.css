@@ -232,3 +232,111 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1.5fr 1fr;
   }
 }
+
+/* Energetic Medical Theme Animations */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(190, 245, 66, 0.15);
+  }
+  14% {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(190, 245, 66, 0.3);
+  }
+  28% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(190, 245, 66, 0.15);
+  }
+  42% {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(190, 245, 66, 0.3);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(190, 245, 66, 0.15);
+  }
+}
+
+.heartbeat-pulse {
+  animation: heartbeat 3s infinite ease-in-out;
+}
+
+@keyframes scanner-beam {
+  0% {
+    top: -5%;
+  }
+  50% {
+    top: 105%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+
+.card-scan {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-scan::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  box-shadow: 0 0 10px var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.card-scan:hover::after {
+  animation: scanner-beam 2.5s infinite linear;
+  opacity: 0.6;
+}
+
+@keyframes float-pill {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.float-pill-animation {
+  animation: float-pill 5s infinite ease-in-out;
+}
+
+/* Card and Button Glow Transitions */
+.card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px var(--shadow);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Animated ECG Heart Line Graphic background */
+.ecg-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-ecg 4s linear infinite;
+}
+
+@keyframes draw-ecg {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+

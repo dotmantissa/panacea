@@ -78,11 +78,11 @@ export async function POST(req: NextRequest) {
       ],
     });
 
-    console.log(`Waiting for GenLayer tx ${txHash} finalization...`);
-    // 2. Wait for finalization
+    console.log(`Waiting for GenLayer tx ${txHash} finalization (ACCEPTED status)...`);
+    // 2. Wait for acceptance
     const receipt = await client.waitForTransactionReceipt({
       hash: txHash,
-      status: 'FINALIZED',
+      status: 'ACCEPTED',
     });
 
     // Verify receipt execution

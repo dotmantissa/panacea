@@ -196,7 +196,7 @@ export default function Dashboard() {
 
         <div className="dashboard-grid">
           {/* Left Column: Form */}
-          <div className="card">
+          <div className="card card-scan">
             <h2 style={{ fontSize: '1.4rem', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <Plus size={20} style={{ color: 'var(--accent)' }} />
               Request New Briefing
@@ -329,7 +329,7 @@ export default function Dashboard() {
           </div>
 
           {/* Right Column: History */}
-          <div className="card" style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className="card card-scan" style={{ display: 'flex', flexDirection: 'column' }}>
             <h2 style={{ fontSize: '1.4rem', marginBottom: '24px' }}>Past Briefings</h2>
 
             {loadingHistory ? (
@@ -420,24 +420,11 @@ export default function Dashboard() {
             }}
           >
             <div style={{ maxWidth: '480px', width: '100%', textAlign: 'center' }}>
-              <div
-                style={{
-                  width: '80px',
-                  height: '80px',
-                  borderRadius: '50%',
-                  border: '3px solid var(--border)',
-                  borderTopColor: 'var(--accent)',
-                  margin: '0 auto 32px auto',
-                  animation: 'spin 1s linear infinite',
-                }}
-              />
-              <style jsx global>{`
-                @keyframes spin {
-                  to {
-                    transform: rotate(360deg);
-                  }
-                }
-              `}</style>
+              <div style={{ marginBottom: '32px' }}>
+                <svg viewBox="0 0 300 100" style={{ width: '100%', height: '80px', stroke: 'var(--accent)', fill: 'none', strokeWidth: 3, strokeLinecap: 'round', strokeLinejoin: 'round' }}>
+                  <path className="ecg-path" d="M0,50 L80,50 L90,30 L100,70 L110,10 L120,90 L130,50 L140,50 L150,40 L160,50 L300,50" />
+                </svg>
+              </div>
 
               <h2 style={{ fontSize: '1.6rem', marginBottom: '12px' }}>On-Chain Medical Consensus</h2>
               <p style={{ color: 'var(--foreground-muted)', fontSize: '0.95rem', marginBottom: '40px' }}>

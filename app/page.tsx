@@ -127,7 +127,7 @@ export default function Home() {
               marginTop: '80px',
             }}
           >
-            <motion.div variants={itemVariants} className="card">
+            <motion.div variants={itemVariants} className="card card-scan">
               <div
                 style={{
                   background: 'rgba(190, 245, 66, 0.1)',
@@ -149,7 +149,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="card">
+            <motion.div variants={itemVariants} className="card card-scan">
               <div
                 style={{
                   background: 'rgba(190, 245, 66, 0.1)',
@@ -171,7 +171,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="card">
+            <motion.div variants={itemVariants} className="card card-scan">
               <div
                 style={{
                   background: 'rgba(190, 245, 66, 0.1)',
@@ -193,8 +193,9 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="card">
+            <motion.div variants={itemVariants} className="card card-scan">
               <div
+                className="heartbeat-pulse"
                 style={{
                   background: 'rgba(190, 245, 66, 0.1)',
                   borderRadius: '12px',
