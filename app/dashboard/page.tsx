@@ -15,6 +15,7 @@ import {
   ArrowRight,
   ShieldAlert,
   Sparkles,
+  ClipboardList,
 } from 'lucide-react';
 
 interface Briefing {
