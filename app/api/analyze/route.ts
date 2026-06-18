@@ -83,6 +83,8 @@ export async function POST(req: NextRequest) {
     const receipt = await client.waitForTransactionReceipt({
       hash: txHash,
       status: 'ACCEPTED',
+      interval: 5000,
+      retries: 60,
     });
 
     // Verify receipt execution
