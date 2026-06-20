@@ -49,7 +49,7 @@ const CONSENSUS_STEPS = [
   'Querying clinical databases (OpenFDA)...',
   'Validators performing independent clinical reviews...',
   'Reaching consensus on treatment safety...',
-  'Storing finalized analysis on-chain...',
+  'Storing finalized analysis on chain...',
 ];
 
 export default function Dashboard() {
@@ -162,7 +162,7 @@ export default function Dashboard() {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || 'The on-chain consensus failed to complete.');
+        throw new Error(data.error || 'The on chain consensus failed to complete.');
       }
 
       const report = await res.json();
@@ -316,7 +316,7 @@ export default function Dashboard() {
                 {isAnalyzing ? (
                   <>
                     <RefreshCw className="spin" size={18} style={{ animation: 'spin 1.5s linear infinite' }} />
-                    Running On-Chain Consensus...
+                    Running On Chain Consensus...
                   </>
                 ) : (
                   <>
@@ -426,7 +426,7 @@ export default function Dashboard() {
                 </svg>
               </div>
 
-              <h2 style={{ fontSize: '1.6rem', marginBottom: '12px' }}>On-Chain Medical Consensus</h2>
+              <h2 style={{ fontSize: '1.6rem', marginBottom: '12px' }}>On Chain Medical Consensus</h2>
               <p style={{ color: 'var(--foreground-muted)', fontSize: '0.95rem', marginBottom: '40px' }}>
                 Validators are independently checking FDA databases and evaluating treatment safety. 
                 Please do not close this window.

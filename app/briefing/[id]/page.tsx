@@ -428,7 +428,7 @@ export default function BriefingDetail({ params }: { params: { id: string } }) {
           {/* 5. Plain-English Summary */}
           <div className="card" style={{ background: 'var(--primary)', border: 'none' }}>
             <h3 style={{ fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', color: '#bef542' }}>
-              Plain-English Briefing Summary
+              Plain English Briefing Summary
             </h3>
             <p style={{ lineHeight: '1.6', color: '#e0f4e7', fontSize: '1.05rem' }}>{result.summary}</p>
           </div>
@@ -437,7 +437,7 @@ export default function BriefingDetail({ params }: { params: { id: string } }) {
           <div className="card">
             <h3 style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
               <Network size={20} style={{ color: 'var(--accent)' }} />
-              On-Chain Audit Records
+              On Chain Audit Records
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: 'var(--foreground-muted)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
@@ -464,7 +464,7 @@ export default function BriefingDetail({ params }: { params: { id: string } }) {
                 <Info size={16} style={{ color: 'var(--accent)', flexShrink: 0 }} />
                 <span>
                   This second opinion was validated by independent validators on the GenLayer Studio Network. 
-                  This briefing is not medical advice, but data-driven intelligence to support your healthcare conversations.
+                  This briefing is not medical advice, but data driven intelligence to support your healthcare conversations.
                 </span>
               </div>
             </div>
@@ -483,7 +483,7 @@ export default function BriefingDetail({ params }: { params: { id: string } }) {
         }}
       >
         <div className="container">
-          <p>© {new Date().getFullYear()} panacea. Medical fact-checks, secured on-chain.</p>
+          <p>© {new Date().getFullYear()} panacea. Medical fact checks, secured on chain.</p>
         </div>
       </footer>
     </div>

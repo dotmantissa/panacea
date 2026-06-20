@@ -68,7 +68,7 @@ export default function Home() {
                 marginBottom: '24px',
               }}
             >
-              Independent medical briefing, on-chain
+              Independent medical briefing, on chain
             </motion.span>
 
             <motion.h1
@@ -96,9 +96,9 @@ export default function Home() {
               }}
             >
               Doctor mumbled some Latin, handed you a piece of paper, and vanished? 
-              Do not spiral on search engines. Panacea cross-checks your diagnosis and 
+              Do not spiral on search engines. Panacea cross checks your diagnosis and 
               prescription with clinical literature, running the analysis through 
-              consensus on-chain to give you a plain-English sanity check.
+              consensus on chain to give you a plain English sanity check.
             </motion.p>
 
             <motion.div variants={itemVariants}>
@@ -166,7 +166,7 @@ export default function Home() {
               </div>
               <h3 style={{ fontSize: '1.3rem', marginBottom: '12px' }}>Dosage Checks</h3>
               <p style={{ color: 'var(--foreground-muted)', lineHeight: '1.5', fontSize: '0.95rem' }}>
-                We cross-check the dosage mathematical limits against your unique age, weight, and 
+                We cross check the dosage mathematical limits against your unique age, weight, and 
                 kidney/liver profile.
               </p>
             </motion.div>
@@ -188,7 +188,7 @@ export default function Home() {
               </div>
               <h3 style={{ fontSize: '1.3rem', marginBottom: '12px' }}>Drug Interactions</h3>
               <p style={{ color: 'var(--foreground-muted)', lineHeight: '1.5', fontSize: '0.95rem' }}>
-                Submit what you already take. We flag severe drug-to-drug or drug-to-food 
+                Submit what you already take. We flag severe drug to drug or drug to food 
                 interactions before they happen.
               </p>
             </motion.div>
@@ -229,7 +229,7 @@ export default function Home() {
         }}
       >
         <div className="container">
-          <p>© {new Date().getFullYear()} panacea. Medical fact-checks, secured on-chain.</p>
+          <p>© {new Date().getFullYear()} panacea. Medical fact checks, secured on chain.</p>
         </div>
       </footer>
     </div>

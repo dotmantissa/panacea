@@ -9,12 +9,8 @@ export default function Header() {
   const { login, logout, authenticated, user } = usePrivy();
   const { theme, toggleTheme } = useTheme();
 
-  // Find a wallet account if available
-  const walletAccount = user?.linkedAccounts?.find((acc) => acc.type === 'wallet');
-  const userAddress = walletAccount?.address;
-  const displayAddress = userAddress
-    ? `${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`
-    : 'Authenticated';
+  const emailAddress = user?.email?.address;
+  const displayAddress = emailAddress || 'Authenticated';
 
   return (
     <header className="navbar">
@@ -86,7 +82,7 @@ export default function Header() {
             </div>
           ) : (
             <button onClick={login} className="btn-primary">
-              Connect Wallet
+              Sign In
             </button>
           )}
         </div>

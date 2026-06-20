@@ -13,8 +13,8 @@ export default function Providers({ children }: { children: ReactNode }) {
           theme: 'dark',
           accentColor: '#bef542',
           logo: '/logo.png',
-          showWalletLoginFirst: true,
         },
+        loginMethods: ['email'],
       }}
     >
       <ThemeProvider>
