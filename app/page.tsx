@@ -81,7 +81,7 @@ export default function Home() {
               }}
             >
               Your doctor gave you 8 minutes. <br />
-              <span style={{ color: 'var(--accent)' }}>We have as long as you need.</span>
+              <span style={{ color: 'var(--accent)' }}>Review your treatment guidelines on your own terms.</span>
             </motion.h1>
 
             <motion.p
