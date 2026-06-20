@@ -81,7 +81,12 @@ export default function Dashboard() {
 
   const fetchHistory = async () => {
     try {
-      const token = await getAccessToken();
+      const token = await Promise.race([
+        getAccessToken(),
+        new Promise<string>((_, reject) =>
+          setTimeout(() => reject(new Error('Privy session initialization timed out.')), 8000)
+        ),
+      ]);
       if (!token) return;
 
       const res = await fetch('/api/history', {
@@ -136,7 +141,20 @@ export default function Dashboard() {
     setConsensusStep(0);
 
     try {
-      const token = await getAccessToken();
+      const token = await Promise.race([
+        getAccessToken(),
+        new Promise<string>((_, reject) =>
+          setTimeout(
+            () =>
+              reject(
+                new Error(
+                  'Privy authentication timed out. Please ensure your browser shields or adblockers are disabled for this site.'
+                )
+              ),
+            10000
+          )
+        ),
+      ]);
       if (!token) {
         throw new Error('You must be logged in to verify treatments.');
       }
